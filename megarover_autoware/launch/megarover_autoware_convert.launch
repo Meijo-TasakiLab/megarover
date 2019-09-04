@@ -1,4 +1,0 @@
-<launch>
-    <node pkg="megarover_autoware" name="megarover2autoware" type="megarover2autoware" respawn="true" args="0 1"/>
-    <node pkg="megarover_autoware" name="autoware2megarover" type="autoware2megarover" respawn="true"/>
-</launch>
