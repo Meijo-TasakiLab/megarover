@@ -36,10 +36,6 @@ void Autoware_to_Megarover::ConvertTopic(const autoware_msgs::VehicleCmd::ConstP
         pub_twist.angular.x = 0.0;
         pub_twist.angular.y = 0.0;
         pub_twist.angular.z = command->twist_cmd.twist.angular.z;
-//        if(_sound_flag == 0){
-//            system("mpv --loop-file ~/shared_dir/sound/megarover_sound.wav &");
-//            _sound_flag = 1;
-//        }
     }
     else{
         pub_twist.linear.x  = 0.0;
@@ -48,10 +44,6 @@ void Autoware_to_Megarover::ConvertTopic(const autoware_msgs::VehicleCmd::ConstP
         pub_twist.angular.x = 0.0;
         pub_twist.angular.y = 0.0;
         pub_twist.angular.z = 0.0;
-//        if(_sound_flag == 1){
-//            system("killall mpv &");
-//            _sound_flag = 0;
-//        }
     }
     _rover_twist.publish(pub_twist);
 }
