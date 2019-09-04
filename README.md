@@ -4,16 +4,16 @@ Package to run Vstone MegaRover from ROS & Autoware
 
 ## Dependency
 
-* ROS (tested with kinetic and melodic)
+- ROS (tested with kinetic and melodic)
 	* rosserial  
 (for kinetic)  
 ``` apt install ros-kinetic-rosserial ```  
 (for melodic)  
 ``` apt install ros-melodic-rosserial ```  
-* mpg321  
+- mpg321  
 ``` apt update
 apt install mpg321 ```  
-* [megarover_samples](https://github.com/vstoneofficial/megarover_samples.git)
+- [megarover_samples](https://github.com/vstoneofficial/megarover_samples.git)
 
 ## Compile
 
