@@ -1,0 +1,10 @@
+<launch>
+    <arg name="model" default="$(find megarover_sim)/urdf/megarover.urdf"/>
+    <arg name="rvizconfig" default="$(find megarover_sim)/rviz/megarover_sim.rviz"/>
+    
+    <param name="robot_description" textfile="$(arg model)"/>
+
+    <node pkg="megarover_sim" name="megarover_sim" type="megarover_sim" respawn="true"/>
+    <node pkg="megarover_samples" name="pub_odom" type="pub_odom" respawn="true"/>
+    <node pkg="rviz" name="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true"/>
+</launch>

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<robot name="megarover">
+    <link name="base_link">
+        <visual>
+            <geometry>
+                <mesh filename="package://megarover_sim/stl/megarover.stl"/>
+            </geometry>
+            <origin xyz="-0.095 0 0" rpy="0 0 1.57079632"/>
+            <material name="megarover">
+                <color rgba="1 1 1 1"/>
+            </material>
+        </visual>
+    </link name="base_link">
+</robot>        
