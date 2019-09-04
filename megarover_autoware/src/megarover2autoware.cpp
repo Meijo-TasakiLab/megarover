@@ -165,7 +165,7 @@ int main(int argc, char **argv)
     printf("%s [/current_pose] [/vehicle/odom] [sound file]\n", argv[0]);
     printf("[/current_pose] <- on:1, off:0\n");
     printf("[/vehicle/odom] <- on:1, off:0\n");
-    printf("[sound file]    <- Path to Audio File (.wav)\n");
+    printf("[sound file]    <- Path to Audio File (.mp3)\n");
     return 1;
   }
   Megarover_to_Autoware megarover2autoware(argv[1][0], argv[2][0], argv[3]);
