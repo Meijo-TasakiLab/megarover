@@ -12,7 +12,8 @@ Package to run Vstone MegaRover from ROS & Autoware
 ``` apt install ros-melodic-rosserial ```  
 * mpg321  
 ``` apt update
-apt install mpg321 ```
+apt install mpg321 ```  
+* [megarover_samples](https://github.com/vstoneofficial/megarover_samples.git)
 
 ## Compile
 
