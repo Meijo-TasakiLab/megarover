@@ -13,10 +13,12 @@ Package to run Vstone MegaRover from ROS & Autoware
 - mpg321  
 ``` apt install mpg321 ```  
 - [megarover_samples](https://github.com/vstoneofficial/megarover_samples.git)  
-``` cd ~/catkin_ws/src ```  
-``` git clone https://github.com/vstoneofficial/megarover_samples.git ```  
-``` cd .. ```  
-``` catkin_make ```  
+```
+cd ~/catkin_ws/src  
+git clone https://github.com/vstoneofficial/megarover_samples.git  
+cd ..  
+catkin_make  
+```  
 
 ## Compile
 
