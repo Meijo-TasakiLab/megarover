@@ -1,6 +1,7 @@
 #include <ros/ros.h>
 #include <geometry_msgs/Twist.h>
 #include <geometry_msgs/Vector3.h>
+#include <cmdline.h>
 
 class Megarover_Change_Speed_Angular
 {
@@ -46,18 +47,23 @@ void Megarover_Change_Speed_Angular::send_twist()
 
 int main(int argc, char** argv)
 {
-    if(argc != 3){
-        printf("%s [speed (m/s)] [angular (rad/s)]", argv[0]);
-        return 1;
+    cmdline::parser cmdparser;
+    cmdparser.add<double>("speed", 's', "Linear speed [m/s]", false, 0.0);
+    cmdparser.add<double>("angular", 'a', "Angular velocity [rad/s]", false, 0.0);
+    cmdparser.add("help", 'h', "Print Help");
+
+    if (!cmdparser.parse(argc, argv) || cmdparser.exist("help")){
+        std::cout << cmdparser.error_full() << cmdparser.usage();
+        return EXIT_FAILURE;
     }
-    
+
     ros::init(argc, argv, "megarover_change_speed_angular");
     Megarover_Change_Speed_Angular megarover_change_speed_angular;
 
-    megarover_change_speed_angular._linear_x = std::atof(argv[1]);
-    megarover_change_speed_angular._angular_z = std::atof(argv[2]);
+    megarover_change_speed_angular._linear_x = cmdparser.get<double>("speed");
+    megarover_change_speed_angular._angular_z = cmdparser.get<double>("angular");
 
     megarover_change_speed_angular.send_twist();
     
-    return 0;
+    return EXIT_SUCCESS;
 }
