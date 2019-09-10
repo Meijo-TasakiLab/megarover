@@ -38,6 +38,7 @@ void Megarover_Change_Speed_Angular::send_twist()
 
     ros::Rate loop_late(10);
 
+    /* Send Message */
     for (int i = 0; i < 10; i++){
         _tw_pub.publish(twist);
         ros::spinOnce();
