@@ -29,6 +29,7 @@ Autoware_to_Megarover::Autoware_to_Megarover(double lim_linear, double lim_angul
     :   lim_linear_(LINEAR_X_LIMIT)
     ,   lim_angular_(ANGULAR_Z_LIMIT)
 {
+    /* 初期化 */
     lim_linear_ = lim_linear;
     lim_angular_ = lim_angular;
     _rover_twist = _nh.advertise<geometry_msgs::Twist>("rover_twist", 1);
