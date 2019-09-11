@@ -59,6 +59,7 @@ int main(int argc, char** argv)
         return EXIT_FAILURE;
     }
 
+    /* ROSノード初期化 */
     ros::init(argc, argv, "megarover_change_speed_angular");
     Megarover_Change_Speed_Angular megarover_change_speed_angular;
 
