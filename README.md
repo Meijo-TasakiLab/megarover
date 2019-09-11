@@ -36,7 +36,5 @@ You can use the following commands to download and compile the package.
 cd ~/catkin_ws/src
 git clone https://github.com/Meijo-TasakiLab/megarover.git
 cd ..
-catkin_make -j1
+catkin_make
 ```
-
-When you compile the code for the first time, you need to add "-j1" behind "catkin_make" for generating some message types. "-j1" is not needed for future compiling.
