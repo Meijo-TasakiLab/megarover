@@ -66,6 +66,7 @@ int main(int argc, char** argv)
     megarover_change_speed_angular._linear_x = cmdparser.get<double>("speed");
     megarover_change_speed_angular._angular_z = cmdparser.get<double>("angular");
 
+    /* トピックの送信 */
     megarover_change_speed_angular.send_twist();
     
     return EXIT_SUCCESS;
