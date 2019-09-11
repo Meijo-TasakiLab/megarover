@@ -48,6 +48,7 @@ void Megarover_Change_Speed_Angular::send_twist()
 
 int main(int argc, char** argv)
 {
+    /* コマンドラインパーサー */
     cmdline::parser cmdparser;
     cmdparser.add<double>("speed", 's', "Linear speed [m/s]", false, 0.0);
     cmdparser.add<double>("angular", 'a', "Angular velocity [rad/s]", false, 0.0);
