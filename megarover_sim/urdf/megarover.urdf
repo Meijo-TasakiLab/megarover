@@ -10,5 +10,5 @@
                 <color rgba="1 1 1 1"/>
             </material>
         </visual>
-    </link name="base_link">
+    </link>
 </robot>        
