@@ -3,9 +3,11 @@
     <link name="base_link">
         <visual>
             <geometry>
-                <mesh filename="package://megarover_sim/stl/megarover.stl"/>
+                <!--<mesh filename="package://megarover_sim/stl/megarover.stl"/>-->
+                <mesh filename="package://megarover_sim/dae/megarover.dae"/>
             </geometry>
-            <origin xyz="-0.095 0 0" rpy="0 0 1.57079632"/>
+            <!--<origin xyz="-0.095 0 0" rpy="0 0 1.57079632"/>-->
+            <origin xyz="0 0 0" rpy="0 0 0"/>
             <material name="megarover">
                 <color rgba="1 1 1 1"/>
             </material>
